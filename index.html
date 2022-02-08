@@ -5,6 +5,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="/resources/demos/style.css">
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 	<link rel="stylesheet" href="./slick/slick.css">
 	<link rel="stylesheet" href="./slick/slick-theme.css">
@@ -14,107 +16,173 @@
 <body>
 	<div class="page-holder">
 		<div class="wrapper">
-			<header class="header">
-				<div class="container">
-					<div class="header-top my-xl-3">
-						<div class="navbar navbar-expand-xl navbar-light row">
-							<a class="navbar-brand col-3" href="#">
-								<div class="brand-img"><img src="./img/logo.svg" alt="Logo Myata"></div>
-							</a>
-							<div class="show col-6 px-5 flex-column">
-								<ul class="navbar-nav mb-3">
-									<li class="nav-item me-4">
-										<a href="tel:0969239099" class="contact-link tel-link">(096) <span>923-90-99</span></a>
+			<!-- <header class="header">
+				<div class="container header-wrapper">
+					<div class="menu-burger"><span></span></div>
+					<nav class="menu">
+						<ul class="menu-list w-leaf">
+							<li class="menu-item">
+							<a class="menu-link" href="#">Главная</a>
+							</li>
+							<li class="menu-item">
+							<a class="menu-link" href="#">О нас</a>
+							</li>
+							<li class="menu-item">
+							<a class="menu-link" href="#">Доставка</a>
+							</li>
+							<li class="menu-item">
+							<a class="menu-link" href="#">Как сделать заказ</a>
+							</li>
+							<li class="menu-item">
+							<a class="menu-link" href="#">Возврат товара</a>
+							</li>
+							<li class="menu-item">
+							<a class="menu-link" href="#">Сотрудничество</a>
+							</li>
+							<li class="menu-item">
+							<a class="menu-link" href="#">Акции</a>
+							</li>
+							<li class="menu-item">
+							<a class="menu-link" href="#">Новости</a>
+							</li>
+							<li class="menu-item">
+							<a class="menu-link" href="#">Контакты</a>
+							</li>
+						</ul>
+					</nav>
+					<a class="header-logo" href="#">
+						<div class="logo-img"><img src="./img/logo.svg" alt="Logo Myata"></div>
+					</a>
+					<div class="user-nav-burger"><span></span></div>
+					<div class="user-nav">
+						<div class="header-actions">
+							<ul class="header-info">
+								<li class="header-info-contact">
+									<a href="tel:0969239099" class="contact-link tel-link">(096) <span>923-90-99</span></a>
+								</li>
+								<li class="header-info-contact">
+									<a href="tel:0636169266" class="contact-link tel-link">(063) <span>616-91-66</span></a>
+								</li>
+							</ul>
+							<form class="search-form" method="get" action="">
+								<input class="form-control" type="search" placeholder="Поиск по сайту" aria-label="Search" id="search">
+								<button type="submit"></button>
+							</form>
+						</div>
+						<div class="header-user">
+								<ul class="header-user-account">
+									<li class="account-item sign-in">
+										<a href="#" class="account-link me-2">Вход</a>
 									</li>
-									<li class="nav-item">
-										<a href="tel:0636169266" class="contact-link tel-link">(063) <span>616-91-66</span></a>
+									<li class="account-item sign-up">
+										<a href="#" class="account-link">Регистрация</a>
 									</li>
 								</ul>
-								<form class="search-form d-flex" method="get" action="">
-									<input class="form-control" type="search" placeholder="Поиск по сайту" aria-label="Search" id="search">
-									<button type="submit"></button>
-								</form>
-							</div>
-							<div class="col-3 cs-column" id="navbarBasic">
-								<ul class="navbar-nav   mb-3">
-									<li class="nav-item nav-user-item cs-sign-in">
-										<a href="#" class="nav-user-link me-2">Вход</a>
-									</li>
-									<li class="nav-item nav-user-item cs-sign-up">
-										<a href="#" class="nav-user-link">Регистрация</a>
-									</li>
-								</ul>
-								<a href="#" class="cs-basket d-flex">
-									<div class="cs-basket-icon me-3"></div>
-									<div class="cs-basket-text">
-										<p>Товаров:<span class="ms-1">25 шт.</span></p>
-										<p>На сумму:<span class="ms-1">3750 грн.</span></p>
+								<a href="#" class="basket">
+									<div class="basket-icon"></div>
+									<div class="basket-text">
+										<p>Товаров:<span>25 шт.</span></p>
+										<p>На сумму:<span>3750 грн.</span></p>
 									</div>
 								</a>
 							</div>
-						</div>
-					</div>
-					<div class="header-bottom">
-						<nav class="navbar navbar-expand-lg cs-nav-menu">
-							<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-								<span class="navbar-toggler-icon"></span>
-							</button>
-							<div class="collapse navbar-collapse" id="navbarSupportedContent">
-								<ul class="navbar-nav w-leaf">
-									<li class="nav-item">
-									<a class="nav-link me-4" href="#">Главная</a>
-									</li>
-									<li class="nav-item">
-									<a class="nav-link me-4" href="#">О нас</a>
-									</li>
-									<li class="nav-item">
-									<a class="nav-link me-4" href="#">Доставка</a>
-									</li>
-									<li class="nav-item">
-									<a class="nav-link me-4" href="#">Как сделать заказ</a>
-									</li>
-									<li class="nav-item">
-									<a class="nav-link me-4" href="#">Возврат товара</a>
-									</li>
-									<li class="nav-item">
-									<a class="nav-link me-4" href="#">Сотрудничество</a>
-									</li>
-									<li class="nav-item">
-									<a class="nav-link me-4" href="#">Акции</a>
-									</li>
-									<li class="nav-item">
-									<a class="nav-link me-4" href="#">Новости</a>
-									</li>
-									<li class="nav-item">
-									<a class="nav-link" href="#">Контакты</a>
-									</li>
-								</ul>
-							</div>
-						</nav>
 					</div>
 				</div>
-			</header>
+			</header> -->
 			<main class="main" id="main">
-				<div class="banner">
-					<div class="banner-img"><img src="./img/bg-1.jpg" alt="Backery products"></div>
-					<div class="container d-flex">
+				<div class="container">
+					<div class="banner" style="background-image: url(./img/bg-1.jpg)">
+						<div class="container d-flex">
 							<aside class="sidebar col-3">
 								<h3 class="sidebar-title">Каталог</h3>
-								<ul class="nav flex-column">
+								<ul class="nav flex-column" id="accordion">
 									<li class="nav-item">
 									<a class="nav-link" href="#">Формы для выпечки</a>
+									<ul class="nav flex-column sub-nav">
+										<li class="nav-item">
+										<a class="nav-link" href="#">Индивидуальные картинки</a>
+										</li>
+										<li class="nav-item">
+										<a class="nav-link" href="#">Картинки с деньгами</a>
+										</li>
+										<li class="nav-item">
+										<a class="nav-link" href="#">Прочие картинки</a>
+										</li>
+										<li class="nav-item">
+										<a class="nav-link" href="#">Пищевые картинки из  разных мультиков</a>
+										</li>
+									</ul>
 									</li>
 									<li class="nav-item">
 									<a class="nav-link" href="#">Кондитерский инвентарь</a>
+									<ul class="nav flex-column sub-nav">
+										<li class="nav-item">
+										<a class="nav-link" href="#">Пищевые картинки из  разных мультиков</a>
+										</li>
+										<li class="nav-item">
+										<a class="nav-link" href="#">Индивидуальные картинки</a>
+										</li>
+										<li class="nav-item">
+										<a class="nav-link" href="#">Картинки с деньгами</a>
+										</li>
+										<li class="nav-item">
+										<a class="nav-link" href="#">Прочие картинки</a>
+										</li>
+									</ul>
 									</li>
 									<li class="nav-item">
 									<a class="nav-link" href="#">Кондитерские ингредиенты</a>
+									<ul class="nav flex-column sub-nav">
+										<li class="nav-item">
+										<a class="nav-link" href="#">Индивидуальные картинки</a>
+										</li>
+										<li class="nav-item">
+										<a class="nav-link" href="#">Пищевые картинки из  разных мультиков</a>
+										</li>
+										<li class="nav-item">
+										<a class="nav-link" href="#">Индивидуальные картинки</a>
+										</li>
+										<li class="nav-item">
+										<a class="nav-link" href="#">Картинки с деньгами</a>
+										</li>
+										<li class="nav-item">
+										<a class="nav-link" href="#">Прочие картинки</a>
+										</li>
+									</ul>
 									</li>
 									<li class="nav-item">
 									<a class="nav-link" href="#">Оборудование </a>
+									<ul class="nav flex-column sub-nav">
+										<li class="nav-item">
+										<a class="nav-link" href="#">Индивидуальные картинки</a>
+										</li>
+										<li class="nav-item">
+										<a class="nav-link" href="#">Картинки с деньгами</a>
+										</li>
+										<li class="nav-item">
+										<a class="nav-link" href="#">Прочие картинки</a>
+										</li>
+										<li class="nav-item">
+										<a class="nav-link" href="#">Пищевые картинки из  разных мультиков</a>
+										</li>
+										<li class="nav-item">
+										</li>
+										<li class="nav-item">
+										<a class="nav-link" href="#">Прочие картинки</a>
+										</li>
+									</ul>
 									</li>
 									<li class="nav-item">
 									<a class="nav-link" href="#">Всё для кухни </a>
+									<ul class="nav flex-column sub-nav">
+										<li class="nav-item">
+										<a class="nav-link" href="#">Индивидуальные картинки</a>
+										</li>
+										<li class="nav-item">
+										<a class="nav-link" href="#">Картинки с деньгами</a>
+										</li>
+										</li>
+									</ul>
 									</li>
 									<li class="nav-item">
 									<a class="nav-link" href="#">Фототорт.  Печать на пищевой бумаге </a>
@@ -149,44 +217,43 @@
 									<h2 class="banner-content-title title mb-1">Только в этом месяце!</h2>
 									<p class="banner-content-text mb-3">Скидка на формы для кексов 35%!!!</p>
 									<a href="#" class="banner-content-link btn btn-primary  btn-lg">Подробнее</a>
-							</div>
-							<div class="slider single-item">
-								<div class="slider-item">
-									<img src="./img/slider-img.jpg" alt="Cupcackes">
 								</div>
-								<div class="slider-item">
-									<img src="./img/slider-img.jpg" alt="Cupcackes">
-								</div>
-								<div class="slider-item">
-									<img src="./img/slider-img.jpg" alt="Cupcackes">
+								<div class="slider">
+									<div class="slider-item">
+										<img src="./img/slider-img.jpg" alt="Cupcackes">
+									</div>
+									<div class="slider-item">
+										<img src="./img/slider-img.jpg" alt="Cupcackes">
+									</div>
+									<div class="slider-item">
+										<img src="./img/slider-img.jpg" alt="Cupcackes">
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="features">
-					<div class="container">
+					<!-- <div class="features">
 						<div class="row">
 							<h2 class="features-title title col-12">Наши преимущества</h2>
-							<div class="features-item col-3">
+							<div class="features-item col-sm-12 col-md-6 col-lg-3">
 								<div class="features-item-img">
 									<img src="./img/icon-1.svg" alt="Features Icon list">
 								</div>
 								<p class="features-item-text">Мы следим за качеством наших товаров</p>
 							</div>
-							<div class="features-item col-3">
+							<div class="features-item col-sm-12 col-md-6 col-lg-3">
 								<div class="features-item-img">
 									<img src="./img/icon-2.svg" alt="Features Icon shopping bag">
 								</div>
 								<p class="features-item-text">У нас большой выбор товаров</p>
 							</div>
-							<div class="features-item col-3">
+							<div class="features-item col-sm-12 col-md-6 col-lg-3">
 								<div class="features-item-img">
 									<img src="./img/icon-3.svg" alt="Features Icon clock">
 								</div>
 								<p class="features-item-text">Мы доставим Ваш заказ вовремя</p>
 							</div>
-							<div class="features-item col-3">
+							<div class="features-item col-sm-12 col-md-6 col-lg-3">
 								<div class="features-item-img">
 									<img src="./img/icon-4.svg" alt="Features Icon red gift">
 								</div>
@@ -194,300 +261,301 @@
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="products">
-					<div class="container p-relative">
+					<div class="products p-relative">
 						<ul class="nav nav-tabs justify-content-center mb-5" id="myTab" role="tablist">
-							<li class="nav-item mx-3" role="presentation">
+							<li class="nav-item mx-1 mx-sm-2 mx-md-3" role="presentation">
 								<button class="btn btn-secondary btn-lg active btn-tabs" id="bestseller-tab" data-bs-toggle="tab" data-bs-target="#bestseller" type="button" role="tab" aria-controls="bestseller" aria-selected="true">Хиты продаж</button>
 							</li>
-							<li class="nav-item mx-3" role="presentation">
+							<li class="nav-item mx-1 mx-sm-2 mx-md-3" role="presentation">
 								<button class="btn btn-secondary btn-lg btn-tabs" id="sales-tab" data-bs-toggle="tab" data-bs-target="#sales" type="button" role="tab" aria-controls="sales" aria-selected="false">Акции</button>
 							</li>
-							<li class="nav-item mx-3" role="presentation">
+							<li class="nav-item mx-1 mx-sm-2 mx-md-3" role="presentation">
 								<button class="btn btn-secondary btn-lg btn-tabs" id="new-tab" data-bs-toggle="tab" data-bs-target="#new" type="button" role="tab" aria-controls="new" aria-selected="false">Новинки</button>
 							</li>
 						</ul>
 						<div class="tab-content" id="myTabContent">
 							<div class="tab-pane fade show active" id="bestseller" role="tabpanel" aria-labelledby="home-tab">
-								<div class="row mb-4">
-									<div class="products-item col-3">
+								<div class="row mb-4 justify-content-center">
+									<div class="products-item col-12 col-sm-6 col-lg-4 col-xl-3">
 										<div class="products-item-img">
 											<img src="./img/item-1.png" alt="Backery forms">
 											<span class="in-stock"></span>
 										</div>
-										<p class="products-item-text">Набор силиконовых порционных форм Корзиночка-Квадрат, 10 шт.</p>
+										<a href="#" class="products-item-text">Набор силиконовых порционных форм Корзиночка-Квадрат, 10 шт.</a>
 										<p class="products-item-price"><span class="products-item-price-before"></span> 55 грн.</p>
 										<a href="#" class="btn btn-primary btn-sm">В корзину</a>
 										<a href="#" class="products-item-buy">Купить в один клик</a>
 									</div>
-									<div class="products-item col-3">
+									<div class="products-item col-12 col-sm-6 col-lg-4 col-xl-3">
 										<div class="products-item-img">
 											<img src="./img/item-2.png" alt="Chocolate fountain">
 											<span class="in-stock"></span>
 										</div>
-										<p class="products-item-text">
+										<a href="#" class="products-item-text">
 											Фонтан шоколадный Altezoro KZ-24/3
-										</p>
+										</a>
 										<p class="products-item-price"><span class="products-item-price-before">2 300 грн.</span>1 800 грн.</p>
 										<a href="#" class="btn btn-primary btn-sm">В корзину</a>
 										<a href="#" class="products-item-buy">Купить в один клик</a>
 									</div>
-									<div class="products-item col-3">
+									<div class="products-item col-12 col-sm-6 col-lg-4 col-xl-3">
 										<div class="products-item-img">
 											<img src="./img/item-3.png" alt="Plunger Leaves">
 											<span class="in-stock"></span>
 										</div>
-										<p class="products-item-text">
+										<a href="#" class="products-item-text">
 											Плунжеры для мастики Листики с металлическим толкателем
-										</p>
+										</a>
 										<p class="products-item-price"><span class="products-item-price-before"></span>48 грн.</p>
 										<a href="#" class="btn btn-primary btn-sm">В корзину</a>
 										<a href="#" class="products-item-buy">Купить в один клик</a>
 									</div>
-									<div class="products-item col-3">
+									<div class="products-item col-12 col-sm-6 col-lg-4 col-xl-3">
 										<div class="products-item-img">
 											<img src="./img/item-4.png" alt="For knives">
 											<span class="out-of-stock"></span>
 										</div>
-										<p class="products-item-text">
+										<a href="#" class="products-item-text">
 											Магнитная планка-держатель для ножей
-										</p>
+										</a>
 										<p class="products-item-price"><span class="products-item-price-before">165 грн.</span>140 грн.</p>
 										<a href="#" class="btn btn-primary btn-sm">В корзину</a>
 										<a href="#" class="products-item-buy">Купить в один клик</a>
 									</div>
 								</div>
 								<div class="row">
-									<div class="col-auto ms-auto more-info">Все хиты</div>
+									<a href="#" class="col-auto ms-auto more-info">Все хиты</a>
 								</div>
 							</div>
 							<div class="tab-pane fade" id="sales" role="tabpanel" aria-labelledby="profile-tab">
-								<div class="row mb-4">
-									<div class="products-item col-3">
+								<div class="row mb-4 justify-content-center">
+									<div class="products-item col-12 col-sm-6 col-lg-4 col-xl-3">
 										<div class="products-item-img">
 											<img src="./img/item-1.png" alt="Backery forms">
 											<span class="in-stock"></span>
 										</div>
-										<p class="products-item-text">Набор силиконовых порционных форм Корзиночка-Квадрат, 10 шт.</p>
+										<a href="#" class="products-item-text">Набор силиконовых порционных форм Корзиночка-Квадрат, 10 шт.</a>
 										<p class="products-item-price"><span class="products-item-price-before"></span> 55 грн.</p>
 										<a href="#" class="btn btn-primary btn-sm">В корзину</a>
 										<a href="#" class="products-item-buy">Купить в один клик</a>
 									</div>
-									<div class="products-item col-3">
+									<div class="products-item col-12 col-sm-6 col-lg-4 col-xl-3">
 										<div class="products-item-img">
 											<img src="./img/item-2.png" alt="Chocolate fountain">
 											<span class="out-of-stock"></span>
 										</div>
-										<p class="products-item-text">
+										<a href="#" class="products-item-text">
 											Фонтан шоколадный Altezoro KZ-24/3
-										</p>
+										</a>
 										<p class="products-item-price"><span class="products-item-price-before">2 300 грн.</span>1 800 грн.</p>
 										<a href="#" class="btn btn-primary btn-sm">В корзину</a>
 										<a href="#" class="products-item-buy">Купить в один клик</a>
 									</div>
-									<div class="products-item col-3">
+									<div class="products-item col-12 col-sm-6 col-lg-4 col-xl-3">
 										<div class="products-item-img">
 											<img src="./img/item-3.png" alt="Plunger Leaves">
 											<span class="in-stock"></span>
 										</div>
-										<p class="products-item-text">
+										<a href="#" class="products-item-text">
 											Плунжеры для мастики Листики с металлическим толкателем
-										</p>
+										</a>
 										<p class="products-item-price"><span class="products-item-price-before"></span>48 грн.</p>
 										<a href="#" class="btn btn-primary btn-sm">В корзину</a>
 										<a href="#" class="products-item-buy">Купить в один клик</a>
 									</div>
-									<div class="products-item col-3">
+									<div class="products-item col-12 col-sm-6 col-lg-4 col-xl-3">
 										<div class="products-item-img">
 											<img src="./img/item-4.png" alt="For knives">
 											<span class="in-stock"></span>
 										</div>
-										<p class="products-item-text">
+										<a href="#" class="products-item-text">
 											Магнитная планка-держатель для ножей
-										</p>
+										</a>
 										<p class="products-item-price"><span class="products-item-price-before">165 грн.</span>140 грн.</p>
 										<a href="#" class="btn btn-primary btn-sm">В корзину</a>
 										<a href="#" class="products-item-buy">Купить в один клик</a>
 									</div>
 								</div>
 								<div class="row">
-									<div class="col-auto ms-auto more-info">Все акции</div>
+									<a href="#" class="col-auto ms-auto more-info">Все акции</a>
 								</div>
 							</div>
 							<div class="tab-pane fade" id="new" role="tabpanel" aria-labelledby="contact-tab">
-								<div class="row mb-4">
-									<div class="products-item col-3">
+								<div class="row mb-4 justify-content-center">
+									<div class="products-item col-12 col-sm-6 col-lg-4 col-xl-3">
 										<div class="products-item-img">
 											<img src="./img/item-1.png" alt="Backery forms">
 											<span class="out-of-stock"></span>
 										</div>
-										<p class="products-item-text">Набор силиконовых порционных форм Корзиночка-Квадрат, 10 шт.</p>
+										<a href="#" class="products-item-text">Набор силиконовых порционных форм Корзиночка-Квадрат, 10 шт.</a>
 										<p class="products-item-price"><span class="products-item-price-before"></span> 55 грн.</p>
 										<a href="#" class="btn btn-primary btn-sm">В корзину</a>
 										<a href="#" class="products-item-buy">Купить в один клик</a>
 									</div>
-									<div class="products-item col-3">
+									<div class="products-item col-12 col-sm-6 col-lg-4 col-xl-3">
 										<div class="products-item-img">
 											<img src="./img/item-2.png" alt="Chocolate fountain">
 											<span class="in-stock"></span>
 										</div>
-										<p class="products-item-text">
+										<a href="#" class="products-item-text">
 											Фонтан шоколадный Altezoro KZ-24/3
-										</p>
+										</a>
 										<p class="products-item-price"><span class="products-item-price-before">2 300 грн.</span>1 800 грн.</p>
 										<a href="#" class="btn btn-primary btn-sm">В корзину</a>
 										<a href="#" class="products-item-buy">Купить в один клик</a>
 									</div>
-									<div class="products-item col-3">
+									<div class="products-item col-12 col-sm-6 col-lg-4 col-xl-3">
 										<div class="products-item-img">
 											<img src="./img/item-3.png" alt="Plunger Leaves">
 											<span class="in-stock"></span>
 										</div>
-										<p class="products-item-text">
+										<a href="#" class="products-item-text">
 											Плунжеры для мастики Листики с металлическим толкателем
-										</p>
+										</a>
 										<p class="products-item-price"><span class="products-item-price-before"></span>48 грн.</p>
 										<a href="#" class="btn btn-primary btn-sm">В корзину</a>
 										<a href="#" class="products-item-buy">Купить в один клик</a>
 									</div>
-									<div class="products-item col-3">
+									<div class="products-item col-12 col-sm-6 col-lg-4 col-xl-3">
 										<div class="products-item-img">
 											<img src="./img/item-4.png" alt="For knives">
 											<span class="in-stock"></span>
 										</div>
-										<p class="products-item-text">
+										<a href="#" class="products-item-text">
 											Магнитная планка-держатель для ножей
-										</p>
+										</a>
 										<p class="products-item-price"><span class="products-item-price-before">165 грн.</span>140 грн.</p>
 										<a href="#" class="btn btn-primary btn-sm">В корзину</a>
 										<a href="#" class="products-item-buy">Купить в один клик</a>
 									</div>
 								</div>
 								<div class="row">
-									<div class="col-auto ms-auto more-info">Все новинки</div>
+									<a href="#" class="col-auto ms-auto more-info">Все новинки</a>
 								</div>
 							</div>
 						</div>
-						<button class="prevtab btn btn-secondary"></button>
-						<button class="nexttab btn btn-secondary"></button>
+						<button class="prevtab btn btn-secondary btn-arrow"></button>
+						<button class="nexttab btn btn-secondary btn-arrow"></button>
 					</div>
-				</div>
-				<div class="about">
-					<div class="about-bg-img">
-						<img src="./img/bg-3.jpg" alt="Backery products">
-					</div>
-					<div class="container">
-						<h2 class="about-title title">Коротко о нас</h2>
-						<div class="about-img">
-							<img src="img/product.jpg" alt="Cooking brushes">
+					<div class="about" style="background-image: url(./img/bg-2.jpg)">
+						<div class="container">
+							<h2 class="about-title title">Коротко о нас</h2>
+							<div class="about-img">
+								<img src="img/product.jpg" alt="Cooking brushes">
+							</div>
+							<p class="about-text">
+								Кондитерский интернет-магазин (Киев, Львов, Харьков) – место, где можно приобрести все для украшения тортов и десертов. Давно ищете где купить готовую мастику, качественные пищевые красители или упаковку для тортов и кексов? У нас можно купить всё, что необходимо для украшения кондитерских изделий.
+							</p>
+							<p>
+								В нынешнее время спрос на мастичные торты просто огромен. И чтобы кондитерам популяризировать свои шедевры, необходимо постоянно придумывать новые варианты оформления, удивляя своих клиентов.
+							</p>
+							<p>
+								Поэтому в продаже постоянно появляются новые силиконовые молды, плунжеры и вырубки для мастики, фигурные скалки и многое другое.
+							</p>
+							<p>
+								Для вашего удобства мы постарались расширить ассортимент интернет-магазина и выйти за рамки лишь кондитерского дела. Поэтому у нас можно приобрести формы для выпечки, кухонные принадлежности, удобные гаджеты для готовки.
+							</p>
+							<p>
+								Для вашего удобства мы постарались расширить ассортимент интернет-магазина и выйти за рамки лишь кондитерского дела. Поэтому у нас можно приобрести формы для выпечки, кухонные принадлежности, удобные гаджеты для готовки.
+							</p>
+							<p>
+								Также в ответ на ваши просьбы появилась новостная страничка, где будут публиковаться полезные статьи и обзоры кондитерских инструментов нашего интернет-магазина.  
+							</p>
+							<p>
+								Купить ингредиенты и инструмент в кондитерском интернет-магазине (Житомир,Чернигов,Винница) можно в пару кликов либо в телефонном режиме.
+							</p>
+							<p>
+								Для вашего удобства мы постарались расширить ассортимент интернет-магазина и выйти за рамки лишь кондитерского дела. Поэтому у нас можно приобрести формы для выпечки, кухонные принадлежности, удобные гаджеты для готовки.
+							</p>
+							<p>
+								Также в ответ на ваши просьбы появилась новостная страничка, где будут публиковаться полезные статьи и обзоры кондитерских инструментов нашего интернет-магазина. 
+							</p>
+							<p>
+								Купить ингредиенты и инструмент в кондитерском интернет-магазине (Житомир,Чернигов,Винница) можно в пару кликов либо в телефонном режиме.
+							</p>
 						</div>
-						<p class="about-text">
-							Кондитерский интернет-магазин (Киев, Львов, Харьков) – место, где можно приобрести все для украшения тортов и десертов. Давно ищете где купить готовую мастику, качественные пищевые красители или упаковку для тортов и кексов? У нас можно купить всё, что необходимо для украшения кондитерских изделий.
-						</p>
-						<p>
-							В нынешнее время спрос на мастичные торты просто огромен. И чтобы кондитерам популяризировать свои шедевры, необходимо постоянно придумывать новые варианты оформления, удивляя своих клиентов.
-						</p>
-						<p>
-							Поэтому в продаже постоянно появляются новые силиконовые молды, плунжеры и вырубки для мастики, фигурные скалки и многое другое.
-						</p>
-						<p>
-							Для вашего удобства мы постарались расширить ассортимент интернет-магазина и выйти за рамки лишь кондитерского дела. Поэтому у нас можно приобрести формы для выпечки, кухонные принадлежности, удобные гаджеты для готовки.
-						</p>
-						<p>
-							Для вашего удобства мы постарались расширить ассортимент интернет-магазина и выйти за рамки лишь кондитерского дела. Поэтому у нас можно приобрести формы для выпечки, кухонные принадлежности, удобные гаджеты для готовки.
-						</p>
-						<p>
-							Также в ответ на ваши просьбы появилась новостная страничка, где будут публиковаться полезные статьи и обзоры кондитерских инструментов нашего интернет-магазина.  
-						</p>
-						<p>
-							Купить ингредиенты и инструмент в кондитерском интернет-магазине (Житомир,Чернигов,Винница) можно в пару кликов либо в телефонном режиме.
-						</p>
-						<p>
-							Для вашего удобства мы постарались расширить ассортимент интернет-магазина и выйти за рамки лишь кондитерского дела. Поэтому у нас можно приобрести формы для выпечки, кухонные принадлежности, удобные гаджеты для готовки.
-						</p>
-						<p>
-							Также в ответ на ваши просьбы появилась новостная страничка, где будут публиковаться полезные статьи и обзоры кондитерских инструментов нашего интернет-магазина. 
-						</p>
-						<p>
-							Купить ингредиенты и инструмент в кондитерском интернет-магазине (Житомир,Чернигов,Винница) можно в пару кликов либо в телефонном режиме.
-						</p>
 					</div>
-				</div>
-				<div class="news">
-					<div class="container">
-						<div class="row">
+					<div class="news">
+						<div class="row justify-content-center">
 							<h2 class="news-title title col-12">Новости</h2>
-							<div class="news-item col-3">
-								<div class="news-item-img">
-									<img src="./img/news-img-1.jpg" alt="How to choose backery forms">
-								</div>
-								<h3 class="news-item-title">Как выбрать силиконовую форму</h3>
-								<p class="news-item-date">28.09.2015</p>
-								<p class="news-item-text">Силиконовые формы привлекают нас своим удобством, яркими цветами и огромным ассортиментом фигурок.</p>
-								<div class="d-flex">
-									<a href="#" class="more-info">Читать далее</a>
-								</div>
-							</div>
-							<div class="news-item col-3">
-								<div class="news-item-img">
-									<img src="./img/news-img-2.jpg" alt="Cream for cackes">
-								</div>
-								<h3 class="news-item-title">Мехенди-Торт. Украшения кремом под роспись хной</h3>
-								<p class="news-item-date">15.09.2015</p>
-								<p class="news-item-text">Традиционное искусство придает определенную символику и экзотическую красоту в любой свадебный торт.</p>
-								<div class="d-flex">
-									<a href="#" class="more-info">Читать далее</a>
+							<div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-sm-4">
+								<div class="news-item">
+									<div class="news-item-img">
+										<img src="./img/news-img-1.jpg" alt="How to choose backery forms">
+									</div>
+									<h3 class="news-item-title">Как выбрать силиконовую форму</h3>
+									<p class="news-item-date">28.09.2015</p>
+									<p class="news-item-text">Силиконовые формы привлекают нас своим удобством, яркими цветами и огромным ассортиментом фигурок.</p>
+									<div class="d-flex">
+										<a href="#" class="more-info">Читать далее</a>
+									</div>
 								</div>
 							</div>
-							<div class="news-item col-3">
-								<div class="news-item-img">
-									<img src="./img/news-img-3.jpg" alt="Cream cheese dessert">
-								</div>
-								<h3 class="news-item-title">Классический рецепт творожной пасхи</h3>
-								<p class="news-item-date">08.07.2015</p>
-								<p class="news-item-text">Все мы привыкли к тому, что на Пасху пекутся куличи, это стало своего рода национальной традицией.</p>
-								<div class="d-flex">
-									<a href="#" class="more-info">Читать далее</a>
+							<div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-sm-4">
+								<div class="news-item">
+									<div class="news-item-img">
+										<img src="./img/news-img-2.jpg" alt="Cream for cackes">
+									</div>
+									<h3 class="news-item-title">Мехенди-Торт. Украшения кремом под роспись хной</h3>
+									<p class="news-item-date">15.09.2015</p>
+									<p class="news-item-text">Традиционное искусство придает определенную символику и экзотическую красоту в любой свадебный торт.</p>
+									<div class="d-flex">
+										<a href="#" class="more-info">Читать далее</a>
+									</div>
 								</div>
 							</div>
-							<div class="news-item col-3">
-								<div class="news-item-img">
-									<img src="./img/news-img-4.jpg" alt="Mats for mastic, how to use ">
+							<div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-sm-4">
+								<div class="news-item">
+									<div class="news-item-img">
+										<img src="./img/news-img-3.jpg" alt="Cream cheese dessert">
+									</div>
+									<h3 class="news-item-title">Классический рецепт творожной пасхи</h3>
+									<p class="news-item-date">08.07.2015</p>
+									<p class="news-item-text">Все мы привыкли к тому, что на Пасху пекутся куличи, это стало своего рода национальной традицией.</p>
+									<div class="d-flex">
+										<a href="#" class="more-info">Читать далее</a>
+									</div>
 								</div>
-								<h3 class="news-item-title">Коврики для мастики. Как пользоваться</h3>
-								<p class="news-item-date">30.05.2015</p>
-								<p class="news-item-text">Силиконовые накладки-коврики для мастики представляют собой новейшую разработку в декорировании тортов.</p>
-								<div class="d-flex">
-									<a href="#" class="more-info">Читать далее</a>
+							</div>
+							<div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+								<div class="news-item">
+									<div class="news-item-img">
+										<img src="./img/news-img-4.jpg" alt="Mats for mastic, how to use ">
+									</div>
+									<h3 class="news-item-title">Коврики для мастики. Как пользоваться</h3>
+									<p class="news-item-date">30.05.2015</p>
+									<p class="news-item-text">Силиконовые накладки-коврики для мастики представляют собой новейшую разработку в декорировании тортов.</p>
+									<div class="d-flex">
+										<a href="#" class="more-info">Читать далее</a>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
+					</div> -->
 				</div>
 			</main>
 		</div>
-		<footer class="footer">
+		<!-- <footer class="footer">
 			<div class="container">
-				<div class="row">
-					<ul class="navbar-nav col-7 w-leaf d-flex flex-row align-items-center">
-						<li class="nav-item">
-						<a class="nav-link me-4" href="#">О нас</a>
+				<div class="footer-menu">
+					<ul class="menu-list w-leaf">
+						<li class="menu-item">
+						<a class="menu-link" href="#">О нас</a>
 						</li>
-						<li class="nav-item">
-						<a class="nav-link me-4" href="#">Доставка</a>
+						<li class="menu-item">
+						<a class="menu-link" href="#">Доставка</a>
 						</li>
-						<li class="nav-item">
-						<a class="nav-link me-4" href="#">Карта сайта</a>
+						<li class="menu-item">
+						<a class="menu-link" href="#">Карта сайта</a>
 						</li>
-						<li class="nav-item">
-						<a class="nav-link me-4" href="#">Производители</a>
+						<li class="menu-item">
+						<a class="menu-link" href="#">Производители</a>
 						</li>
-						<li class="nav-item">
-						<a class="nav-link me-4" href="#">Акции</a>
+						<li class="menu-item">
+						<a class="menu-link" href="#">Акции</a>
 						</li>
 					</ul>
-					<ul class="col-auto footer-contacts">
+					<ul class="footer-contacts">
 						<li class="mb-2">
 							<a href="tel:0969239099" class="contact-link tel-link">(096) <span>923-90-99</span></a>
 						</li>
@@ -498,7 +566,7 @@
 							<a href="mailto:info@myata.in.ua" class="contact-link mail-link">info@myata.in.ua</a>
 						</li>
 					</ul>
-					<ul class="col-3 footer-socials d-flex align-items-center mx-auto">
+					<ul class="footer-socials">
 						<li>
 							<a href="#" class="footer-socials-link socials-vk"></a>
 						</li>
@@ -516,16 +584,17 @@
 						</li>
 					</ul>
 				</div>
-				<div class="row copyright align-items-center">
-					<p class="col-12">Интернет-магазин “Мята” © 2015 г</p>
+				<div class="copyright">
+					<p>Интернет-магазин “Мята” © 2015 г</p>
 				</div>
 				<div class="scrollup"></div>
 			</div>
-		</footer>
+		</footer> -->
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+	<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
 	<script src="./slick/slick.min.js"></script>
 	<script src="./script.js"></script>
 </body>
