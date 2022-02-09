@@ -1603,6 +1603,10 @@ main{
 		;
 	}
 
+	.banner{
+		z-index: 50;
+	}
+
 	.banner-wrapper{
 		flex-direction: row;
 	}
