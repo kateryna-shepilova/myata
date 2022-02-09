@@ -14,6 +14,14 @@ $(document).ready(function () {
 	});
 });
 
+function myFunction(id) {
+	var x = document.getElementById(id);
+	if (x.className.indexOf("w3-show") == -1) {
+		x.className += " w3-show";
+	} else {
+		x.className = x.className.replace(" w3-show", "");
+	}
+}
 
 $(document).ready(function () {
 	$('.slider').slick({
@@ -70,5 +78,14 @@ $(window).scroll(function () {
 	}
 	else {
 		$('.scrollup').fadeOut();
+	}
+});
+
+$(document).scroll(function () {
+	if ((window.matchMedia("(min-width: 992px)").matches) && ($(document).scrollTop() >= (($('main').height()) - 240))) {
+		$('.scrollup').addClass('up');
+	}
+	else {
+		$('.scrollup').removeClass('up');
 	}
 });
