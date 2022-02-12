@@ -15,12 +15,12 @@ body{
 	color: var(--bs-secondary);
 }
 
-body.lock{
-	overflow: hidden;
-}
-
 body, html{
 	height: 100%;
+}
+
+body.lock{
+	overflow: hidden;
 }
 
 img{
