@@ -27,7 +27,7 @@ $(document).ready(function () {
 	$('.slider').slick({
 		infinite: true,
 		dots: true,
-		autoplay: true
+		autoplay: false
 	});
 });
 
