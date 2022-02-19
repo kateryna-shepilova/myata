@@ -20,7 +20,7 @@ body, html{
 }
 
 body.lock{
-	overflow: hidden;
+	overflow: hidden!important;
 }
 
 img{
@@ -48,12 +48,12 @@ ul, ol, li{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	overflow: hidden;
+	/*  */
 }
 
 .container{
-	max-width: 1174px;
 	width: 100%;
+	max-width: 1174px;
 }
 
 .header{
@@ -645,6 +645,7 @@ main{
 	left: 50%;
 	transform: translateX(-50%);
 	padding: 30px 0;
+	overflow: hidden;
 }
 
 .sidebar{
@@ -769,6 +770,7 @@ main{
 	transform: translateX(-50%);
 	background: var(--bs-light);
 	z-index: -1;
+	overflow: hidden;
 }
 
 .title{
@@ -1129,7 +1131,7 @@ main{
 }
 
 .news{
-	margin: 80px 0;
+	margin: 80px 0 24px;
 }
 
 .news-item{
@@ -1288,6 +1290,7 @@ main{
 	bottom: 0;
 	transform: translateX(-50%);
 	background: #2c3e50;
+	overflow: hidden;
 }
 
 .copyright p{
@@ -1296,21 +1299,18 @@ main{
 }
 
 .scrollup {
+	display: block;
 	position: fixed;
 	width: 36px;
 	height: 36px;
 	background-color: var(--bs-info);
-	right: 30px;
-	bottom: 60px;
+	left: calc(100% - 60px);
+	bottom: 55px;
 	border-radius: 5px;
 	cursor: pointer;
 	display: none;
-	z-index: 999;
+	z-index: 800;
 	transition: all 0.2s linear;
-}
-
-.scrollup.up{
-	bottom: 250px;
 }
 
 .scrollup:hover {
@@ -1495,6 +1495,7 @@ main{
 		transform: translate(-50%, 0);
 		background-color: var(--bs-secondary);
 		z-index: -1;
+		overflow: hidden;
 	}
 
 	.menu-list{
@@ -1678,7 +1679,10 @@ main{
 	}
 
 	.scrollup {
-		right: 150px;
+		position: sticky;
+		left: calc(100% - 30px);
+		bottom: 20px;
+		margin-bottom: 20px;
 	}
 
 	.footer-menu{
