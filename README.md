@@ -1,3 +1,3 @@
 # Myata
 
-https://sarpensortia.github.io/myata/
+https://kateryna-shepilova.github.io/myata/
